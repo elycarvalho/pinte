@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial, Helvetica, sans-serif;
+}
+
+
+#grade{
+	border: 1px solid red;
+	width: 300px;
+	height: 300px;
+	display: grid;
+	grid-template-columns: repeat(10, auto);
+}
+
+.caixa{
+	width: 30px;
+	height: 30px;
+	border: 1px solid darkgray;
+}
