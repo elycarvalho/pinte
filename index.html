@@ -8,11 +8,27 @@
 	<script src="script.js" defer></script>
 </head>
 <body>
-  <h3>PINTE OS QUADRADOS</h3>
-  <div id="grade">
-  	
-  </div>
+  <div class="container">
+  	<div class="toolbar">
+	  	<p>cor</p>
+	  	<input type="color" value="#5ede5f" id="cor">
 
-  <input type="color" value="#000000" id="cor">
+	  	<p>cor de fundo</p>
+	  	<input type="color" id="corFundo" onfocusout="preencheFundo()">
+
+	  	<button id="btnLimpa">Limpar</button>
+
+	  	<legend>Forma do ponto</legend>
+	  	<select name="formas" id="formas">
+	  		<option value="quadrado">Quadrado</option>
+	  		<option value="redondo">Redondo</option>
+	  		<option value="oval">Oval</option>
+	  	</select>
+    </div>
+
+    <div id="grade">
+    </div>
+  </div>
+  
 </body>
 </html>
