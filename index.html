@@ -3,29 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BOILER PLATE</title>
+	<title>DOT PAINT</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
   	<div class="toolbar">
-	  	<p>cor</p>
-	  	<input type="color" value="#5ede5f" id="cor">
+  		<div class="tool">
+	  	  <label>cor</label>
+	  	  <input type="color" value="#5ede5f" id="cor">
+      </div>
 
-	  	<p>cor de fundo</p>
-	  	<input type="color" id="corFundo" onfocusout="preencheFundo()">
+      <div class="tool">
+	  	  <label>cor fundo</label>
+	  	  <input type="color" id="corFundo" value="#dedede" onfocusout="preencheFundo()">
+      </div>
 
-	  	<button id="btnLimpa">Limpar</button>
-
-	  	<legend>Forma do ponto</legend>
-	  	<select name="formas" id="formas">
-	  		<option value="quadrado">Quadrado</option>
-	  		<option value="redondo">Redondo</option>
-	  		<option value="oval">Oval</option>
-	  	</select>
+      <div class="tool">
+	  	  <label>preencher</label>
+	  	  <input type="color" id="preencher" onfocusout="preenche()">
+      </div>
+      
+      <div class="tool">
+		  	<legend>Forma do ponto</legend>
+		  	<select name="formas" id="formas" onfocusout="formatoPonto">
+		  		<option value="quadrado">Quadrado</option>
+		  		<option value="redondo">Redondo</option>
+		  		<option value="oval">Oval</option>
+		  	</select>
+	    </div>
+ 
+	    <div class="tool">      
+	      <button id="btnLimpa">Limpar</button>
+	    </div>
     </div>
-
     <div id="grade">
     </div>
   </div>
