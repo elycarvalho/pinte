@@ -3,15 +3,13 @@ const cor = document.querySelector('#cor')
 const btnLimpa = document.querySelector('#btnLimpa')
 const corFundo = document.querySelector('#corFundo')
 const cliqueMouse = document.querySelector('#cliqueMouse')
-let mouse = 'mouseover'
-
+const formas = document.querySelector('#formas')
 function criaGrade() {
-	for (var i = 0; i < 340; i++) {
+	for (var i = 0; i < 484; i++) {
 		grade.innerHTML += `<div class="caixa quadro${i + 1}"></div>`
 	}
 }
 criaGrade()
-mudaMouse()
 
 const caixas = document.querySelectorAll('.caixa')
 
@@ -22,37 +20,17 @@ btnLimpa.addEventListener('click', () => {
 	}
 })
 
-var x = 0
-function mudaMouse() {
-	mudaMouse2('break')
-    grade.addEventListener('click', function(e) {
-	    if (e.target.classList.contains('caixa')) {
-		e.target.style.backgroundColor = cor.value
-	    }
-    })
-}
-
-function mudaMouse2() {
-    grade.addEventListener('mouseover', function(e) {
-	    if (e.target.classList.contains('caixa')) {
-		e.target.style.backgroundColor = cor.value
-	    }
-    })
-}
-
-	
-	/*if(cliqueMouse.value == 'passar') {mouse = 'mouseover'}
-		console.log('mouse: ' + mouse)
-	grade.addEventListener(mouse)
-	//console.log('cliqueMouse: ' + cliqueMouse.value)*/
-
-
-/*grade.addEventListener('click', function(e) {
+grade.addEventListener('click', function(e) {
 	if (e.target.classList.contains('caixa')) {
-		e.target.style.backgroundColor = cor.value
+	  e.target.style.backgroundColor = cor.value
 	}
-})*/
+})
 
+grade.addEventListener('dblclick', function(e) {
+	if (e.target.classList.contains('caixa')) {
+	  e.target.style.backgroundColor = '#fff'
+	}
+})
 
 function preencheFundo() {
 	grade.style.backgroundColor = corFundo.value
@@ -70,10 +48,20 @@ function preenche() {
 }
 
 function mudaForma() {
+	let raio
+	switch(formas.value) {
+	case 'quadrado':
+      raio = 0
+      break
+    case 'oval':
+      raio = 5
+      break
+    case 'redondo':
+      raio = 8
+	}
 	caixas.forEach(mudaForma)
 	function mudaForma(item, index) {
-	  caixas[index].style.borderRadius = '3px'
+	  caixas[index].style.borderRadius = raio + 'px'
 	}
 }
 
-mudaForma()
