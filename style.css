@@ -53,7 +53,7 @@ body{
 
 #grade{
 	width: 352px;
-	height: 352px;
+	height: 400px;
 	display: grid;
 	grid-template-columns: repeat(22, auto);background-color: #fff;
 }
