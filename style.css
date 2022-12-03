@@ -53,7 +53,7 @@ body{
 
 #grade{
 	width: 352px;
-	height: 400px;
+	height: 352px;
 	display: grid;
 	grid-template-columns: repeat(22, auto);background-color: #fff;
 }
@@ -84,7 +84,7 @@ option{
 	}
 	#grade{
 		width: 340px;
-		height: 288px;
+		height: 338px;
 	}
 	.toolbar{
 		width: 340px;
@@ -100,13 +100,13 @@ option{
 		height: 14px;
 	}
 	#grade{
-		width: 300px;
-		height: 255px;
+		width: 308px;
+		height: 308px;
 	}
 	.toolbar{
-		width: 300px;
+		width: 308px;
 	}
 	.container{
-		width: 300px;
+		width: 308px;
 	}
 }
